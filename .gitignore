@@ -14,3 +14,7 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+
+lib/rubycas-server
+lib/cas_authenticator
+config/database.yml
