@@ -8,5 +8,5 @@ end
 
 #inserts our custom rack middleware
 Persimmon::Application.configure do
-  config.middleware.use(SiteIdInjector)
+  config.middleware.use(QuerySessionizer)
 end
