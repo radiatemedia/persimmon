@@ -55,7 +55,8 @@ input.button {
 }
 
 #username,
-#password {
+#password,
+#domain {
   width: 10em;
 }
 
@@ -81,7 +82,8 @@ input.button {
 }
 
 #form-layout #username-label-container,
-#form-layout #password-label-container {
+#form-layout #password-label-container,
+#form-layout #domain-label-container {
   text-align: right;
 }
 
