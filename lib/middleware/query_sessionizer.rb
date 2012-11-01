@@ -11,7 +11,7 @@ class QuerySessionizer
 
       query_string = env['QUERY_STRING']
       query_hash = Rack::Utils.parse_nested_query(query_string)
-      extra_parameters = query_hash.delete_if {|key, value| ['service', 'rm'].include?(key)}
+      extra_parameters = query_hash.delete_if {|key, value| ['service'].include?(key)}
 
       session['cas.additional_query_parameters'] = (session['cas.additional_query_parameters'] || {}).merge extra_parameters
 
