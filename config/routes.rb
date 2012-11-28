@@ -56,6 +56,12 @@ Persimmon::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
+  #handle permission requests from lucre... this should be deprecated
+  #at some point
+  if Object.const_defined?(:LegacyPermission)
+    match '/cas/permission' => LegacyPermission.new, :anchor => false
+  end
+
   #send cas requests to cas
   match '/cas(/other_path)' => CASServer::Server, :anchor => false
 end
