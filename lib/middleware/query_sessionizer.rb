@@ -7,6 +7,7 @@ class QuerySessionizer
 
   def call(env)
     if env['PATH_INFO'].match(/login/) && env['REQUEST_METHOD'] == 'GET'
+      Rails.logger.debug "in #call of QuerySessionizer at #{Time.now}"
       session = env['rack.session']
 
       query_string = env['QUERY_STRING']
@@ -14,6 +15,8 @@ class QuerySessionizer
       extra_parameters = query_hash.delete_if {|key, value| ['service'].include?(key)}
 
       session['cas.additional_query_parameters'] = (session['cas.additional_query_parameters'] || {}).merge extra_parameters
+
+      Rails.logger.debug "leaving #call of QuerySessionizer at #{Time.now}"
 
       true
     end
