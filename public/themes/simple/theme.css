@@ -1,28 +1,17 @@
-/*body {
-  background-image: url(bg.png);
-}
-
-#headline-container {
-  margin-bottom: 5px;
+html, body {
+  padding: 0;
+  margin: 0;
 }
 
 #login-box {
-  margin: 0 auto;
-  width: 450px;
-  top: 110px;
-  position: relative;
+  width: 100%;
 }
 
 #login-form {
-  background-color: #fff;
-  border: 1px #aaa solid;
+  padding: 0px;
 }
 
-#logo-container {
-  vertical-align: middle;
+label {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
 }
-
-#logo {
-    width: 128px;
-    height: 128px;
-}*/
