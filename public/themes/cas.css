@@ -13,7 +13,8 @@ label {
 
 input {
   font-weight: normal;
-  font-size: 12px;
+  font-size: 18px;
+  min-height: 20px;
 }
 
 input.button {
