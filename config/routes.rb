@@ -62,6 +62,13 @@ Persimmon::Application.routes.draw do
     match '/cas/permission' => LegacyPermission.new, :anchor => false
   end
 
+  #handle pixel signins from pre-authenticated uber requests.
+  #this allows autologin after signup, plus a few edge cases.
+  #a proxy ticket would be preferable, so this should be considered deprecated
+  if Object.const_defined?(:LegacyPixelAuthenticator)
+    match '/cas/login_from_ticket' => LegacyPixelAuthenticator.new, :anchor => false
+  end
+
   #send cas requests to cas
   match '/cas(/other_path)' => CASServer::Server, :anchor => false
 end
