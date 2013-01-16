@@ -1,0 +1,56 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+#login-box {
+  width: 100%;
+}
+
+#login-form {
+  padding: 0px;
+}
+
+input, #username, #password, #domain {
+  font-size: 11px;
+  min-height: inherit;
+  width: auto;
+}
+
+.label {
+  background-color:#FFF8D3;
+  font-size:11px;
+  font-weight:bold;
+  line-height:16px;
+}
+
+#form-layout td:first-child {
+  background-color:#FFF8D3;
+  font-size:11px;
+  font-weight:bold;
+  line-height:16px;
+}
+
+table {
+  border:0;
+  background-color:#ccc;
+}
+
+table td {
+  background-color:#fff;
+  padding:5px;
+  text-align: left;
+}
+
+p.flash {
+  background:url('/info.gif') top left no-repeat;
+  padding-left:30px;
+  min-height:28px;
+  line-height:24px;
+  width:270px;
+  font-size:14px;
+}
+
+div.buttons {
+  text-align:right; width:270px;
+}
