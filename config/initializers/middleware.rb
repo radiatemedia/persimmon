@@ -9,4 +9,5 @@ end
 #inserts our custom rack middleware
 Persimmon::Application.configure do
   config.middleware.use(QuerySessionizer)
+  config.middleware.use(ErrorHandler)
 end

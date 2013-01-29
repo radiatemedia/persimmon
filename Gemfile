@@ -31,6 +31,7 @@ gem 'jquery-rails'
 group :development do
   gem 'capistrano'
   gem 'sqlite3'
+  gem 'rspec-rails'
 end
 
 # To use ActiveModel has_secure_password
