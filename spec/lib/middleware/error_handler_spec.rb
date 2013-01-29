@@ -28,7 +28,8 @@ describe ErrorHandler do
       'PATH_INFO' => '/cas/login',
       'QUERY_STRING' => '',
       'SERVER_NAME' => 'localhost',
-      'SERVER_PORT' => 80
+      'SERVER_PORT' => 80,
+      'rack.url_scheme' => 'http'
     )
 
     headers['Location'].should match(/\?.*redirected=1/)

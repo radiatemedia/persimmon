@@ -8,7 +8,7 @@ class ErrorHandler
   def call(env)
     status, headers, body = @app.call(env)
 
-    return handle_exception if status == 500
+    return handle_exception(env, nil) if status == 500
 
     [status, headers, body]
   rescue Exception => e
